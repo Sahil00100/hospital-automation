@@ -1,0 +1,72 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+
+<body>
+
+    <a href="{% url 'index' %}" class=" btn btn-primary ">back to home page</a>
+    <div class="container">
+        <h1 class="mt-5">{{p.name}}</h1> 
+        <hr>  
+        <div class="row d-flex justify-content-center">
+            <div class="patient-details col-lg-5 col-md-6  mt-5">
+
+                <p><span>Patient Name</span></p>
+                <p><span>Date</span> </p>
+                <p><span>Age</span> </p>
+                <p><span>Email</span></p>
+                <p><span>Phone Number</span></p>
+                <p><span>House</span></p>
+                <p><span>City</span></p>
+                <p><span>District</span></p>
+                <p><span>State</span> </p>
+                <p><span>Disease</span></p>
+                <p><span>Symptoms</span></p>
+                <p><span>Medicine</span></p>
+            </div>
+            <div class="dash col-lg-2 mt-5">
+                <p>-</p>
+                <p>-</p>
+                <p>-</p>
+                <p>-</p>
+                <p>-</p>
+                <p>-</p>
+                <p>-</p>
+                <p>-</p>
+                <p>-</p>
+                <p>-</p>
+                <p>-</p>
+                <p>-</p>
+            </div>
+
+            <div class="patient-details-2 col-lg-5 col-md-6 mt-5">
+                <p>{{p.name}}</p>
+                <p>{{p.date}}</p>
+                <p>{{p.age}}</p>
+                <p>{{p.email}}</p>
+                <p>{{p.phonenumber}}</p>
+                <p>{{p.house}}</p>
+                <p>{{p.city}}</p>
+                <p>{{p.district}}</p>
+                <p>{{p.state}}</p>
+                <p>{{p.disease}}</p>
+                <p>{{p.symptoms}}</p>
+                <p>{{p.medicine}}</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
